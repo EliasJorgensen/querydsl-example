@@ -13,6 +13,6 @@ public class MyService {
 
     @Transactional
     public MyEntity findById(UUID id) {
-        return myDao.findById(id).get();
+        return myDao.findOne(QMyEntity.myEntity.id.eq(id)).get();
     }
 }
